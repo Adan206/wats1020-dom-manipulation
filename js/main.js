@@ -56,7 +56,7 @@ var targetElement = event.target;
   
 var container = targetElement.parentElement.parentElement;
   
-$(container).find('details').each(function(index, el) {
+$(container).find('.details').each (function(index, el) {
   
     if ($(el).is(':visible')) {
         $(el).fadeOut();
@@ -86,26 +86,26 @@ $(container).find('details').each(function(index, el) {
     
     
 $('.vote').on('click', function(event){
+
+
   
-($(this).attr('data-vote') === 'great'); {
+if ($(this).attr('data-vote') === 'great'); {
   
 voteCounts.great = voteCounts.great + 1; }
-  
+
 {voteCounts.greatest = voteCounts.greatest + 1;}
   
 voteCounts.total = voteCounts.total + 1;
   
-var greatPercent =  voteCounts.great/voteCounts.total *100;
+var greatPercent =  voteCounts.great/voteCounts.total * 100;
   
-var greatestPercent = voteCounts.greatest/voteCounts.total*100;
+var greatestPercent = voteCounts.greatest/voteCounts.total * 100;
   
 
- $('.great-Progress').css ('width', greatPercent + '%');
- $('.greatest-Progress').css ('width', greatestPercent + '%');
+ $('.great-progress').css ('width', greatPercent + '%');
+ $('.greatest-progress').css ('width', greatestPercent + '%');
   
-  
+
        });
 });
 
-
-                
